@@ -1,0 +1,22 @@
+To solve this, several approaches can be used. We can increase the specificity of the `p` rule, override it with `!important` (generally discouraged), or restructure the CSS to minimize conflicts.  In this case, the most elegant solution might involve using a more specific selector for the desired styling.
+
+Here's an example of how to solve it using a more specific selector: 
+```css
+/* solution.css */
+.box { 
+  width: 300px; 
+  border: 1px solid black; 
+}
+
+p { 
+  color: blue;
+}
+.box p { 
+  color: red; 
+}
+
+/* Added more specific selector */
+.box > p { /* direct child of .box */ 
+  color: green; 
+}
+```
