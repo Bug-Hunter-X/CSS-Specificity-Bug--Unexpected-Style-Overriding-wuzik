@@ -1,0 +1,1 @@
+The following CSS code snippet demonstrates a common issue where specificity can lead to unexpected results.  The rule `.box p` has higher specificity than `p`, causing the latter to be overridden even though it's defined later. This can be particularly tricky to debug if you're working on a large project or inheriting code.
